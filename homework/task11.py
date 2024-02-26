@@ -24,3 +24,10 @@ for name in names:
     names_dict[name] = names.count(name)
 
 print(names_dict)
+
+while True:
+    name_input = input('Enter a name to search for (or "q" to quit): ')
+    if name_input == 'q':
+        break
+    elif name_input in names_dict:
+        print(f'{name_input} appears {names.count(name_input)} times.')
